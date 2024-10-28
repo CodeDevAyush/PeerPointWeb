@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Enthusiast Club</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+        *{
+            font-family: "Lexend", serif;
+        }
+        </style>
+    <body class="min-h-screen flex flex-col bg-gray-50">
+      <!-- Navigation Bar (You can add this from the original theme) -->
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16">
+            <div class="flex items-center space-x-4">
+              <i data-lucide="code-2" class="h-6 w-6"></i>
+              <span class="font-bold text-xl">AI Enthusiast Club</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+              <div class="relative group">
+                <a href="#home" class="hover:text-gray-300 py-2 flex items-center">
+                  <i data-lucide="home" class="h-4 w-4 mr-2"></i>
+                  Home
+                </a>
+                <ul class="absolute left-0 mt-0 w-48 bg-white rounded-md shadow-lg hidden group-hover:block">
+                  <li><a href="#overview" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Overview</a></li>
+                  <li><a href="#features" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Features</a></li>
+                </ul>
+              </div>
+              <div class="relative group">
+                <a href="#community" class="hover:text-gray-300 py-2 flex items-center">
+                  <i data-lucide="users" class="h-4 w-4 mr-2"></i>
+                  Community
+                </a>
+                <ul class="absolute left-0 mt-0 w-48 bg-white rounded-md shadow-lg hidden group-hover:block">
+                  <li><a href="webdev.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Web Dev</a></li>
+                  <li><a href="aiml.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">A.I.</a></li>
+                  <li><a href="music.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">MUSIC</a></li>
+                  <li><a href="edtech.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ED-TECH</a></li>
+                </ul>
+              </div>
+              <div class="relative group">
+                <a href="#events" class="hover:text-gray-300 py-2 flex items-center">
+                  <i data-lucide="calendar" class="h-4 w-4 mr-2"></i>
+                  Events
+                </a>
+                <ul class="absolute left-0 mt-0 w-48 bg-white rounded-md shadow-lg hidden group-hover:block">
+                  <li><a href="#upcoming" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Upcoming Events</a></li>
+                  <li><a href="#past" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Past Events</a></li>
+                </ul>
+              </div>
+              <div class="relative group">
+                <a href="#about" class="hover:text-gray-300 py-2 flex items-center">
+                  <i data-lucide="info" class="h-4 w-4 mr-2"></i>
+                  About
+                </a>
+                <ul class="absolute left-0 mt-0 w-48 bg-white rounded-md shadow-lg hidden group-hover:block">
+                  <li><a href="#team" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Our Team</a></li>
+                  <li><a href="#contact" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      <style>
+        .group:hover > ul {
+          display: block;
+        }
+      </style>
+      
+      <script src="https://unpkg.com/lucide@latest"></script>
+      <script>
+        lucide.createIcons();
+      </script>
+      <!-- Main Content -->
+      <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Add Group Button -->
+        <div class="flex justify-end mb-6">
+          <button
+            onclick="openAddGroup()"
+            class="flex items-center space-x-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors"
+          >
+            <i data-lucide="plus-circle" class="h-5 w-5"></i>
+            <span>Add Group</span>
+          </button>
+        </div>
+
+        <!-- Club Description -->
+        <div class="mb-8">
+          <h1 class="text-3xl font-bold text-gray-900 mb-4">
+            AI Enthusiast Club
+          </h1>
+          <div class="bg-white rounded-lg shadow p-6">
+            <p class="text-gray-600">
+              The AI Enthusiast Club brings together students fascinated by
+              artificial intelligence and machine learning. Members engage in
+              discussions about emerging AI technologies, participate in
+              hands-on projects, and collaborate on research initiatives. This
+              club aims to demystify AI concepts, encourage innovation, and
+              provide a supportive environment for sharing ideas and resources.
+            </p>
+          </div>
+        </div>
+
+        <!-- Groups Section -->
+        <div class="existing-groups" id="existingGroups">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">Groups</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Group Cards -->
+            <div class="group-card bg-white rounded-lg shadow-md p-6">
+              <div class="flex items-start justify-between">
+                <h4 class="text-xl font-semibold text-gray-800">
+                  Machine Learning Group
+                </h4>
+                <i data-lucide="brain" class="h-5 w-5 text-gray-800"></i>
+              </div>
+              <p class="mt-2 text-gray-600">
+                This group focuses on the fundamentals and applications of
+                machine learning, exploring algorithms, data preprocessing, and
+                model evaluation techniques.
+              </p>
+              <div class="mt-4 flex items-center text-sm text-gray-500">
+                <i data-lucide="users" class="h-4 w-4 mr-2"></i>
+                <span>25 Students</span>
+              </div>
+              <button
+                onclick="openChat()"
+                class="mt-4 flex items-center space-x-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors w-full justify-center"
+              >
+                <i data-lucide="message-circle" class="h-4 w-4"></i>
+                <span>Chat</span>
+              </button>
+            </div>
+
+            <div class="group-card bg-white rounded-lg shadow-md p-6">
+              <div class="flex items-start justify-between">
+                <h4 class="text-xl font-semibold text-gray-800">
+                  AI Ethics Discussion Group
+                </h4>
+                <i data-lucide="scale" class="h-5 w-5 text-gray-800"></i>
+              </div>
+              <p class="mt-2 text-gray-600">
+                Join this group to engage in meaningful discussions about the
+                ethical implications of AI technologies, exploring topics such
+                as bias, transparency, and accountability.
+              </p>
+              <div class="mt-4 flex items-center text-sm text-gray-500">
+                <i data-lucide="users" class="h-4 w-4 mr-2"></i>
+                <span>18 Students</span>
+              </div>
+              <button
+                onclick="openChat()"
+                class="mt-4 flex items-center space-x-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors w-full justify-center"
+              >
+                <i data-lucide="message-circle" class="h-4 w-4"></i>
+                <span>Chat</span>
+              </button>
+            </div>
+
+            <div class="group-card bg-white rounded-lg shadow-md p-6">
+              <div class="flex items-start justify-between">
+                <h4 class="text-xl font-semibold text-gray-800">
+                  Deep Learning Research Group
+                </h4>
+                <i data-lucide="network" class="h-5 w-5 text-gray-800"></i>
+              </div>
+              <p class="mt-2 text-gray-600">
+                In this collaborative space, members work on deep learning
+                projects, including neural networks and advanced architectures,
+                fostering hands-on experience with real-world data.
+              </p>
+              <div class="mt-4 flex items-center text-sm text-gray-500">
+                <i data-lucide="users" class="h-4 w-4 mr-2"></i>
+                <span>15 Students</span>
+              </div>
+              <button
+                onclick="openChat()"
+                class="mt-4 flex items-center space-x-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors w-full justify-center"
+              >
+                <i data-lucide="message-circle" class="h-4 w-4"></i>
+                <span>Chat</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat Popup -->
+        <div
+          id="chatPopup"
+          class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full"
+        >
+          <div
+            class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white"
+          >
+            <div class="flex items-center justify-between border-b pb-2">
+              <h4 class="text-lg font-semibold">Chat</h4>
+              <button
+                onclick="closeChat()"
+                class="text-gray-400 hover:text-gray-600"
+              >
+                <i data-lucide="x" class="h-5 w-5"></i>
+              </button>
+            </div>
+            <div id="chatBody" class="my-4 h-64 overflow-y-auto">
+              <p class="text-gray-600">Welcome to the chat!</p>
+            </div>
+            <div class="flex space-x-2">
+              <input
+                type="text"
+                id="messageInput"
+                placeholder="Type a message..."
+                class="flex-grow px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+              <button
+                onclick="sendMessage()"
+                class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-indigo-700"
+              >
+                <i data-lucide="send" class="h-5 w-5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add Group Popup -->
+        <div
+          id="addGroupPopup"
+          class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full"
+        >
+          <div
+            class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white"
+          >
+            <div class="flex items-center justify-between border -b pb-2">
+              <h4 class="text-lg font-semibold">Add New Group</h4>
+              <button
+                onclick="closeAddGroup()"
+                class="text-gray-400 hover:text-gray-600"
+              >
+                <i data-lucide="x" class="h-5 w-5"></i>
+              </button>
+            </div>
+            <div class="space-y-4 my-4">
+              <input
+                type="text"
+                id="groupName"
+                placeholder="Group Name"
+                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+              <textarea
+                id="groupDescription"
+                placeholder="Group Description"
+                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                rows="3"
+              ></textarea>
+            </div>
+            <button
+              onclick="addGroup()"
+              class="w-full bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-indigo-700"
+            >
+              Add Group
+            </button>
+          </div>
+        </div>
+      </main>
+      <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">About Us</h5>
+                    <p class="text-gray-400">
+                        Empowering students to become skilled web developers through collaboration and hands-on learning.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white">Resources</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Connect With Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-lucide="github" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text -gray-400 hover:text-white">
+                            <i data-lucide="linkedin" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-lucide="twitter" class="h-6 w-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2024 Web Development Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    </body>
+  </head>
+</html>

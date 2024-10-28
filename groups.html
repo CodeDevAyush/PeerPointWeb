@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide-icons"></script>
+    <title>Student Peer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+        *{
+            font-family: "Lexend", serif;
+        }
+        </style>
+    <style>
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .blink {
+            animation: blink 1s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <nav class="bg-gray-800 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16">
+            <div class="flex items-center space-x-4">
+              <i data-lucide="code-2" class="h-6 w-6"></i>
+              <span class="font-bold text-xl">PeerPoint</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+              <div class="relative group">
+                <a href="#home" class="hover:text-gray-300 py-2 flex items-center">
+                  <i data-lucide="home" class="h-4 w-4 mr-2"></i>
+                  Home
+                </a>
+                <ul class="absolute left-0 mt-0 w-48 bg-white rounded-md shadow-lg hidden group-hover:block">
+                  <li><a href="#overview" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Overview</a></li>
+                  <li><a href="#features" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Features</a></li>
+                </ul>
+              </div>
+              <div class="relative group">
+                <a href="#community" class="hover:text-gray-300 py-2 flex items-center">
+                  <i data-lucide="users" class="h-4 w-4 mr-2"></i>
+                  Community
+                </a>
+                <ul class="absolute left-0 mt-0 w-48 bg-white rounded-md shadow-lg hidden group-hover:block">
+                  <li><a href="web.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Web Dev</a></li>
+                  <li><a href="ai.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">A.I.</a></li>
+                  <li><a href="music.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">MUSIC</a></li>
+                  <li><a href="edtech.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ED-TECH</a></li>
+                </ul>
+              </div>
+              <div class="relative group">
+                <a href="#events" class="hover:text-gray-300 py-2 flex items-center">
+                  <i data-lucide="calendar" class="h-4 w-4 mr-2"></i>
+                  Events
+                </a>
+                <ul class="absolute left-0 mt-0 w-48 bg-white rounded-md shadow-lg hidden group-hover:block">
+                  <li><a href="#upcoming" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Upcoming Events</a></li>
+                  <li><a href="#past" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Past Events</a></li>
+                </ul>
+              </div>
+              <div class="relative group">
+                <a href="#about" class="hover:text-gray-300 py-2 flex items-center">
+                  <i data-lucide="info" class="h-4 w-4 mr-2"></i>
+                  About
+                </a>
+                <ul class="absolute left-0 mt-0 w-48 bg-white rounded-md shadow-lg hidden group-hover:block">
+                  <li><a href="#team" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Our Team</a></li>
+                  <li><a href="#contact" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      <style>
+        .group:hover > ul {
+          display: block;
+        }
+      </style>
+      
+      <script src="https://unpkg.com/lucide@latest"></script>
+      <script>
+        lucide.createIcons();
+      </script>
+
+    <div class="bg-gray-100 text-gray-800 flex">
+        <!-- Sidebar with increased width -->
+        <div class="sidebar bg-gray-800 p-4 shadow-lg " style="width: 500px;">
+            <div class="flex items-center mb-4">
+                <i data-lucide="radio" class="h-6 w-6 text-red-600 mr-2 blink"></i>
+                <h3 class="text-lg font-bold text-blue-600">Live Events</h3>
+            </div>
+            <div class="bg-gray-200 p-3 rounded-md">
+                <p>Event 1: Coding Bootcamp</p>
+                <p>Event 2: AI Workshop</p>
+                <p>Event 3: Student Hackathon</p>
+            </div>
+            <br />
+            <h3 class="text-lg font-bold text-blue-600">Trending Groups</h3>
+            <div class="bg-gray-200 p-3 rounded-md">
+                <p>1. Web Development Club</p>
+                <p>2. AI Enthusiasts</p>
+                <p>3. EdTech Pioneers</p>
+            </div>
+        </div>
+        <div class="content ml-12 p-6 flex-grow">
+            <section id="home" class="mt-6">
+                <h1 class="text-2xl font-bold">Welcome to Student Peer</h1>
+                <p class="mt-2">Welcome to Student Peer! We're thrilled to have you join us at Student Peer, your new hub for collaboration, connection, and growth! As you embark on this exciting journey, we want to ensure you feel right at home in our vibrant community.</p>
+                <p class="mt-2">Getting started is easy. Simply create your profile, browse through our diverse groups, and join those that resonate with you.</p>
+                <p class="mt-2">Thank you for being part of Student Peer! We're excited to see the connections you make and the projects you embark on. Together, let's create an enriching environment that celebrates learning and collaboration.</p>
+            </section>
+
+            <!-- Community Section -->
+            <section id="community" class="mt-6">
+                <h1 class="text-2xl font-bold">Community Forum</h1>
+                <p class="mt-2">Engage with peers, ask questions, and participate in discussions.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <img src="images/img1.jpg" alt="Discussion Group" class="w-full h-40 object-cover mb-4 rounded">
+                        <i data-lucide="message-square" class="h-6 w-6 text-blue-600 mb-2"></i>
+                        <h2 class="font-bold">Discussion Group</h2>
+                        <p class="text-gray-600">Join discussions on various topics and engage with peers.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <img src="images/img2.jpg" alt="Peer Networking" class="w-full h-40 object-cover mb-4 rounded">
+                        <i data-lucide="users" class="h-6 w-6 text-blue-600 mb-2"></i>
+                        <h2 class="font-bold">Peer Networking</h2>
+                        <p class="text-gray-600">Connect with peers and build meaningful relationships.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <img src="images/img3.jpg" alt="Resource Sharing" class="w-full h-40 object-cover mb-4 rounded">
+                        <i data-lucide="book-open" class="h-6 w-6 text-blue-600 mb-2"></i>
+                        <h2 class="font-bold">Resource Sharing</h2>
+                        <p class="text-gray-600">Share and access valuable resources with the community.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Events Section -->
+            <section id="events" class="mt-6">
+                <h1 class="text-2xl font-bold">Upcoming Events</h1>
+                <p class="mt-2">Discover and participate in various student events.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <img src="images/event1.jpg" alt="Coding Bootcamp" class="w-full h-40 object-cover mb-4 rounded">
+                        <i data-lucide="calendar" class="h-6 w-6 text-blue-600 mb-2"></i>
+                        <h2 class="font-bold">Coding Bootcamp</h2>
+                        <p class="text-gray-600">Join our upcoming coding bootcamp and learn from industry experts.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <img src="images/event2.jpg" alt="AI Workshop" class="w-full h-40 object-cover mb-4 rounded">
+                        <i data-lucide="microphone" class="h-6 w-6 text-blue-600 mb-2"></i>
+                        <h2 class=" font-bold">AI Workshop</h2>
+                        <p class="text-gray-600">Participate in our AI workshop and explore the latest trends and innovations.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <img src="images/event3.jpg" alt="Student Hackathon" class="w-full h-40 object-cover mb-4 rounded">
+                        <i data-lucide="trophy" class="h-6 w-6 text-blue-600 mb-2"></i>
+                        <h2 class="font-bold">Student Hackathon</h2>
+                        <p class="text-gray-600">Join our student hackathon and showcase your coding skills.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="mt-6">
+                <h1 class="text-2xl font-bold">About Student Peer</h1>
+                <p class="mt-2">Learn more about our platform and its mission.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <img src="images/img4.jpg" alt="Our Mission" class="w-full h-40 object-cover mb-4 rounded">
+                        <i data-lucide="heart" class="h-6 w-6 text-blue-600 mb-2"></i>
+                        <h2 class="font-bold">Our Mission</h2>
+                        <p class="text-gray-600">Empowering students to become skilled web developers through collaboration and hands-on learning.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <img src="images/img5.jpg" alt="Our Community" class="w-full h-40 object-cover mb-4 rounded">
+                        <i data-lucide="users" class="h-6 w-6 text-blue-600 mb-2"></i>
+                        <h2 class="font-bold">Our Community</h2>
+                        <p class="text-gray-600">A vibrant community of students, mentors, and industry experts.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <img src="images/img6.jpg" alt="Our Impact" class="w-full h-40 object-cover mb-4 rounded">
+                        <i data-lucide="chart-bar" class="h-6 w-6 text-blue-600 mb-2"></i>
+                        <h2 class="font-bold">Our Impact</h2>
+                        <p class="text-gray-600">Transforming the way students learn and grow in the tech industry.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">About Us</h5>
+                    <p class="text-gray-400">
+                        Empowering students to become skilled web developers through collaboration and hands-on learning.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white">Resources</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Connect With Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-lucide="github" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text -gray-400 hover:text-white">
+                            <i data-lucide="linkedin" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-lucide="twitter" class="h-6 w-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2024 Web Development Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling function
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth",
+                });
+            });
+        });
+    </script>
+</body>
+</html>

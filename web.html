@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Web Development Club</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+        *{
+            font-family: "Lexend", serif;
+        }
+        </style>
+
+  </head>
+  <body class="min-h-screen flex flex-col bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800 text-white shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center space-x-4">
+            <i data-lucide="code-2" class="h-6 w-6"></i>
+            <span class="font-bold text-xl">Web Dev Club</span>
+          </div>
+          <div class="flex items-center space-x-4">
+            <a href="#" class="hover:text-gray-300">Home</a>
+            <a href="#" class="hover:text-gray-300">Projects</a>
+            <a href="#" class="hover:text-gray-300">Resources</a>
+            <a href="login1.html" class="hover:text-gray-300">Logout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <!-- Add Group Button -->
+      <div class="flex justify-end mb-6">
+        <button
+          onclick="openAddGroup()"
+          class="flex items-center space-x-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors"
+        >
+          <i data-lucide="plus-circle" class="h-5 w-5"></i>
+          <span>Add Group</span>
+        </button>
+      </div>
+
+      <!-- Club Description -->
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-4">
+          Web Development Club
+        </h1>
+        <div class="bg-white rounded-lg shadow p-6">
+          <p class="text-gray-600">
+            The Web Development Club is a creative space for students passionate
+            about building websites and applications. Whether you're a beginner
+            or an experienced coder, this club offers workshops, coding
+            sessions, and collaborative projects to enhance your skills. Members
+            can explore front-end and back-end development, work on real-world
+            projects, and gain insights into the latest web technologies.
+          </p>
+        </div>
+      </div>
+
+      <!-- Groups Section -->
+      <div class="existing-groups" id="existingGroups">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Groups</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Group Cards -->
+          <div class="group-card bg-white rounded-lg shadow-md p-6">
+            <div class="flex items-start justify-between">
+              <h4 class="text-xl font-semibold text-gray-800">
+                Front-End Development Group
+              </h4>
+              <i
+                data-lucide="layout-template"
+                class="h-5 w-5 text-gray-800"
+              ></i>
+            </div>
+            <p class="mt-2 text-gray-600">
+              Focuses on HTML, CSS, and JavaScript, helping members enhance
+              their skills in front-end technologies.
+            </p>
+            <div class="mt-4 flex items-center text-sm text-gray-500">
+              <i data-lucide="users" class="h-4 w-4 mr-2"></i>
+              <span>25 Students</span>
+            </div>
+            <button
+              onclick="openChat()"
+              class="mt-4 flex items-center space-x-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors w-full justify-center"
+            >
+              <i data-lucide="message-circle" class="h-4 w-4"></i>
+              <span>Chat</span>
+            </button>
+          </div>
+
+          <div class="group-card bg-white rounded-lg shadow-md p-6">
+            <div class="flex items-start justify-between">
+              <h4 class="text-xl font-semibold text-gray-800">
+                Back-End Development Group
+              </h4>
+              <i data-lucide="database" class="h-5 w-5 text-gray-800"></i>
+            </div>
+            <p class="mt-2 text-gray-600">
+              Explores server-side programming with Node.js, databases, and APIs
+              for building robust web applications.
+            </p>
+            <div class="mt-4 flex items-center text-sm text-gray-500">
+              <i data-lucide="users" class="h-4 w-4 mr-2"></i>
+              <span>18 Students</span>
+            </div>
+            <button
+              onclick="openChat()"
+              class="mt-4 flex items-center space-x-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors w-full justify-center"
+            >
+              <i data-lucide="message-circle" class="h-4 w-4"></i>
+              <span>Chat</span>
+            </button>
+          </div>
+
+          <div class="group-card bg-white rounded-lg shadow-md p-6">
+            <div class="flex items-start justify-between">
+              <h4 class="text-xl font-semibold text-gray-800">
+                Full-Stack Projects Group
+              </h4>
+              <i data-lucide="layers" class="h-5 w-5 text-gray-800"></i>
+            </div>
+            <p class="mt-2 text-gray-600">
+              Collaborates on full-stack projects to gain hands-on experience in
+              both front-end and back-end development.
+            </p>
+            <div class="mt-4 flex items-center text-sm text-gray-500">
+              <i data-lucide="users" class="h-4 w-4 mr-2"></i>
+              <span>15 Students</span>
+            </div>
+            <button
+              onclick="openChat()"
+              class="mt-4 flex items-center space-x-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors w-full justify-center"
+            >
+              <i data-lucide="message-circle" class="h-4 w-4"></i>
+              <span>Chat</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Popup -->
+      <div
+        id="chatPopup"
+        class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full"
+      >
+        <div
+          class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white"
+        >
+          <div class="flex items-center justify-between border-b pb-2">
+            <h4 class="text-lg font-semibold">Chat</h4>
+            <button
+              onclick="closeChat()"
+              class="text-gray-400 hover:text-gray-600"
+            >
+              <i data-lucide="x" class="h-5 w-5"></i>
+            </button>
+          </div>
+          <div id="chatBody" class="my-4 h-64 overflow-y-auto">
+            <p class="text-gray-600">Welcome to the chat!</p>
+          </div>
+          <div class="flex space-x-2">
+            <input
+              type="text"
+              id="messageInput"
+              placeholder="Type a message..."
+              class="flex-grow px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+            <button
+              onclick="sendMessage()"
+              class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-indigo-700"
+            >
+              <i data-lucide="send" class="h-5 w-5"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Group Popup -->
+      <div
+        id="addGroupPopup"
+        class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full"
+      >
+        <div
+          class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white"
+        >
+          <div class="flex items-center justify-between border-b pb-2">
+            <h4 class="text-lg font-semibold">Add New Group</h4>
+            <button
+              onclick="closeAddGroup()"
+              class="text-gray-400 hover:text-gray-600"
+            >
+              <i data-lucide="x" class="h-5 w-5"></i>
+            </button>
+          </div>
+          <div class="space-y-4 my-4">
+            <input
+              type="text"
+              id="groupName"
+              placeholder="Group Name"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+            <textarea
+              id="groupDescription"
+              placeholder="Group Description"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              rows="3"
+            ></textarea>
+          </div>
+          <button
+            onclick="addGroup()"
+            class="w-full bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-indigo-700"
+          >
+            Add Group
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h5 class="text-lg font-semibold mb-4">About Us</h5>
+            <p class="text-gray-400">
+              Empowering students to become skilled web developers through
+              collaboration and hands-on learning.
+            </p>
+          </div>
+          <div>
+            <h5 class="text-lg font-semibold mb-4">Quick Links</h5>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Projects</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Resources</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="text-lg font-semibold mb-4">Connect With Us</h5>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i data-lucide="github" class="h-6 w-6"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i data-lucide="linkedin" class="h-6 w-6"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i data-lucide="twitter" class="h-6 w-6"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400"
+        >
+          <p>&copy; 2024 Web Development Club. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+
+      function openChat() {
+        document.getElementById("chatPopup").classList.remove("hidden");
+      }
+
+      function closeChat() {
+        document.getElementById("chatPopup").classList.add("hidden");
+      }
+
+      function sendMessage() {
+        const messageInput = document.getElementById("messageInput");
+        const chatBody = document.getElementById("chatBody");
+        const message = messageInput.value;
+
+        if (message) {
+          const newMessage = document.createElement("p");
+          newMessage.className = "mb-2";
+          newMessage.innerText = "You: " + message;
+          chatBody.appendChild(newMessage);
+          messageInput.value = "";
+          chatBody.scrollTop = chatBody.scrollHeight;
+        }
+      }
+
+      function openAddGroup() {
+        document.getElementById("addGroupPopup").classList.remove("hidden");
+      }
+
+      function closeAddGroup() {
+        document.getElementById("addGroupPopup").classList.add("hidden");
+      }
+
+      function addGroup() {
+        const groupName = document.getElementById("groupName").value;
+        const groupDescription =
+          document.getElementById("groupDescription").value;
+        const existingGroups = document.querySelector(".grid");
+
+        if (groupName && groupDescription) {
+          const newGroupCard = document.createElement("div");
+          newGroupCard.className =
+            "group-card bg-white rounded-lg shadow-md p-6";
+          newGroupCard.innerHTML = `
+                    <div class="flex items-start justify-between">
+                        <h4 class="text-xl font-semibold text-gray-800">${groupName}</h4>
+                        <i data-lucide="layout-template" class="h-5 w-5 text-gray-800"></i>
+                    </div>
+                    <p class="mt-2 text-gray-600">${groupDescription}</p>
+                    <div class="mt-4 flex items-center text-sm text-gray-500">
+                        <i data-lucide="users" class="h-4 w-4 mr-2"></i>
+                        <span>0 Students</span>
+                    </div>
+                    <button onclick="openChat()" class="mt-4 flex items-center space-x-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors w-full justify-center">
+                        <i data-lucide="message-circle" class="h-4 w-4"></i>
+                        <span>Chat</span>
+                    </button>
+                `;
+
+          existingGroups.appendChild(newGroupCard);
+          lucide.createIcons();
+
+          document.getElementById("groupName").value = "";
+          document.getElementById("groupDescription").value = "";
+          closeAddGroup();
+        }
+      }
+    </script>
+  </body>
+</html>
